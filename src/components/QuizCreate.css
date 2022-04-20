@@ -1,0 +1,18 @@
+.btn-quiz {
+    display: flex;
+    justify-content: space-between;
+}
+
+.select-correct {
+    background: eee2dc;
+}
+
+.form-quiz-create {
+    color: #123c69;
+    align-items: normal;
+}
+
+.create-btns {
+    color: white !important;
+    background: #123c69!important;
+}

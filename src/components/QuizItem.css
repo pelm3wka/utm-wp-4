@@ -1,0 +1,15 @@
+.quiz-card {
+    background-color: #eee2dc !important;
+    color: #123c69 !important;
+    border: 4px solid #123c69;
+    margin: 5vw;
+}
+
+.view-quiz-btn {
+    color: #123c69 !important;
+}
+
+.start-quiz-btn {
+    color: #123c69 !important;
+}
+

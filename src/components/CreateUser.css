@@ -1,0 +1,98 @@
+html,
+body,
+#root,
+.App {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+.App div.wrapper h1.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.wrapper{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.header {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    color: #123c69;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 26px;
+}
+
+input {
+    max-width: 400px;
+    width: 40vw;
+    height: 60px;
+
+    background: #edc7b7;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 20px;
+    color: #123c69;
+
+    padding-left: 20px;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 0 1px #FF5C00;
+}
+
+.btn-signUp {
+    width: 240px;
+    height: 50px;
+    background: #123c69;
+    box-shadow: 0 0 4px #123c69;
+    border-radius: 10px;
+    border-right-color: #123c69;
+
+    font-size: 18px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+
+.p-already-register {
+    color: #edc7b7;
+    font-size: 14px;
+}
+
+.p-already-register a {
+    color: edc7b7;
+    text-decoration: underline;
+}
+
+.error {
+    color: #ac3b61;
+    height: 0;
+    font-size:20px;
+    margin-top: -20px;
+    margin-bottom: 5px;
+    margin-right: auto;
+}
