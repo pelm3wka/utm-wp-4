@@ -5,7 +5,6 @@ const defaultState = {
     isFetching: true
 }
 
-
 export default function quizesReducer (state = defaultState, action){
     switch (action.type) {
         case SET_QUIZES:

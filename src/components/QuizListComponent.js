@@ -2,7 +2,7 @@ import React, {useEffect} from "react";
 import './QuizList.css'
 import QuizItemComponent from "./QuizItemComponent";
 import {useDispatch, useSelector} from "react-redux";
-import {getQuizzes} from "../actions/getQuizzes";
+import {getQuizzes} from "../quiz-fetchers/getQuizzes";
 import {Button} from "@mui/material";
 import {useNavigate} from "react-router-dom";
 
@@ -21,13 +21,13 @@ export default function QuizListComponent () {
 
     return(
         <div className={"quiz-list-wrapper"}>
-            <Button onClick={onAddQuizHandler} size="large" className="quiz-list-btn-add-quiz">
-                add a quiz
-            </Button>
             <div className="quiz-list">
             {quizes.map((quiz, index) =>
                 <QuizItemComponent quiz={quiz} key={quiz.id}/>
             )}
+            <Button onClick={onAddQuizHandler} size="large" className="quiz-list-btn-add-quiz">
+                create a quiz
+            </Button>
             </div>
         </div>
     )

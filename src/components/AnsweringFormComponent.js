@@ -1,7 +1,7 @@
-import React, {useState} from "react";
-import {Checkbox} from "@mui/material";
+import React, { useState } from "react";
+import { Checkbox } from "@mui/material";
 
-export default function AnsweringFormComponent ({question}) {
+export default function AnsweringFormComponent({ question }) {
     const [checked1, setChecked1] = useState(false);
     const [checked2, setChecked2] = useState(false);
     const [counter, setCounter] = useState(0);
@@ -13,8 +13,8 @@ export default function AnsweringFormComponent ({question}) {
     const [answered, setAnswered] = useState(false);
 
     const submitAnswer = (questionId) => {
-      setTempAnswer(checked1==true ? 0 : 1);
-      setAnswer(question.answers[tempAnswer]);
+        setTempAnswer(checked1 == true ? 0 : 1);
+        setAnswer(question.answers[tempAnswer]);
         let quizId = +localStorage.getItem('quizId');
         let userId = +localStorage.getItem('userId');
         const axios = require('axios').default
@@ -26,18 +26,18 @@ export default function AnsweringFormComponent ({question}) {
                     user_id: userId
                 }
             }, {
-                headers: {"X-Access-Token": process.env.REACT_APP_ACCESS_TOKEN}
-            }). then((response) => {
-                setCorrectAnswer(response.correct_answer);
-                setAnswered(true);
-                setCorrectAnswer(response.correct);
+            headers: { "X-Access-Token": process.env.REACT_APP_ACCESS_TOKEN }
+        }).then((response) => {
+            setCorrectAnswer(response.correct_answer);
+            setAnswered(true);
+            setCorrectAnswer(response.correct);
         }).catch((err) => console.log(err))
 
 
-      setCounter(prevState => prevState+1);
-      if(counter>=question.answers.length){
-          setCanSubmit(true);
-      }
+        setCounter(prevState => prevState + 1);
+        if (counter >= question.answers.length) {
+            setCanSubmit(true);
+        }
     }
 
     return (
@@ -57,10 +57,10 @@ export default function AnsweringFormComponent ({question}) {
             </div>
             <button
                 className="btn-signUp"
-                style={(checked1 == checked2) ? {background: "gray"} : {}}
-                disabled={checked1 == checked2 }
+                style={(checked1 == checked2) ? { background: "gray" } : {}}
+                disabled={checked1 == checked2}
                 onClick={(e) => submitAnswer(question.id)}>submit answers</button>
-            { answered ?
+            {answered ?
                 <div>
                     {!correctAnswered ?
                         <p>Correct answer is {correctAnswer}</p>

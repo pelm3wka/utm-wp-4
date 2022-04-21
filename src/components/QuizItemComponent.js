@@ -11,12 +11,12 @@ export default function QuizItemComponent (props) {
     const dispatch = useDispatch();
     let navigate = useNavigate();
     const style = {
-        color: 'black',
-        background: 'white',
+        color: '#123c69',
+        background: '#eee2dc',
         position: 'absolute',
         top: '50%',
         left: '50%',
-        transform: 'translate(-50%, -50%)',
+        transform: 'translate(-100%, -50%)',
         width: 400,
         border: '2px solid #000',
         boxShadow: 70,
@@ -39,7 +39,7 @@ export default function QuizItemComponent (props) {
         <Card sx={{ width: '30%' }} className="quiz-card">
             <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                    quiz name: {' ' + quiz.title}
+                    {' ' + quiz.title}
                 </Typography>
                 <Typography color="#123c69">
                     questions: {' ' + quiz.questions_count}
@@ -58,10 +58,7 @@ export default function QuizItemComponent (props) {
                 >
                     <Box sx={style}>
                         <Typography id="modal-modal-title" variant="h6" component="h2">
-                            quiz name: {' ' + quiz.title}
-                        </Typography>
-                        <Typography id="modal-modal-title" variant="h6" component="h2">
-                            questions: {' ' + quiz.questions_count}
+                            {' ' + quiz.title}
                         </Typography>
                         <Button size={"medium"} onClick={(e) => startQuiz(quiz.id, e)} className="start-quiz-btn">start quiz</Button>
                     </Box>

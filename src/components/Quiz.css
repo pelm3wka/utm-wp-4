@@ -1,3 +1,12 @@
 .wrapper {
     color: #123c69 !important;
 }
+
+.list-item {
+    display: block;
+}
+
+.quiz-goback-btn {
+    color: #eee2dc !important;
+    background-color: #123c69 !important;
+}
